@@ -1,4 +1,4 @@
-from time import time
+from time import time
 import math
 lnum = 0
 pic = 0
@@ -21,9 +21,8 @@ benchmarks = [1,10,100,1000,10000,100000,1000000,10000000]
 def picalc(n):
     global pic
     pic = n*(math.sqrt((1/2)-math.cos(360/n)))
+    print("Time from start:", time()-start)
     return int(pic)
 
-
-#print("Time from start:", time()-start)
-for i in range(len(benchmarks)):
+for i in range(len(benchmarks)):#This part just runs the benchmarks
     print(picalc(benchmarks[i]))
